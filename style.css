@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=MedievalSharp&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=UnifrakturCook:wght@700&family=VT323&display=swap");
+.indexStyle {
+  margin: 0;
+  padding: 40px 0;
+  width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: #0f020f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.indexStyle .personajes {
+  display: flex;
+  flex-direction: row;
+}
+.indexStyle .personajes img {
+  margin: 0 -100px;
+  height: 350px;
+}
+.indexStyle .personajes .personajePrincipal {
+  transition: all ease-out 1s;
+  z-index: 4;
+  height: 400px;
+}
+.indexStyle .personajes .diablo, .indexStyle .personajes .princesa {
+  transition: all 1s ease;
+}
+.indexStyle .contenedorCartel {
+  position: relative;
+  display: inline-block;
+  transition: all 1s ease;
+}
+.indexStyle .contenedorCartel p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90px);
+  color: rgb(28, 11, 2);
+  font-size: 50px;
+  font-family: "UnifrakturCook", cursive;
+  z-index: 1;
+  cursor: pointer;
+}
+.indexStyle .contenedorCartel .cartel1 {
+  width: 300px;
+  height: auto;
+  transition: all 0.5s ease;
+}
+.indexStyle .contenedorCartel:hover .cartel1 {
+  filter: brightness(70%);
+}
+.indexStyle .form {
+  position: absolute;
+  bottom: 50px;
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.indexStyle .form .cartel2 {
+  width: 350px;
+  height: 120px;
+}
+.indexStyle .form .flecha {
+  height: 120px;
+  transition: all ease 0.5s;
+  filter: brightness(100%);
+}
+.indexStyle .form .flecha:hover {
+  cursor: pointer;
+  filter: brightness(70%);
+}
+.indexStyle .form input {
+  position: absolute;
+  height: 50px;
+  width: 250px;
+  transform: translate(50px, 30px);
+  font-size: 40px;
+  font-family: "UnifrakturCook", cursive;
+  color: rgb(28, 11, 2);
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.indexStyle .form input::-moz-placeholder {
+  color: rgb(132, 103, 51);
+}
+.indexStyle .form input::placeholder {
+  color: rgb(132, 103, 51);
+}
+
+.clicked .personajePrincipal {
+  transform: scale(1.2);
+}
+.clicked .diablo, .clicked .princesa {
+  transform: scale(0.8);
+  opacity: 0;
+}
+.clicked .contenedorCartel {
+  opacity: 0;
+  transform: translateY(80px);
+}
+.clicked .form {
+  opacity: 1;
+  transform: translateY(-100px);
+}
+
+.escena1Style {
+  background-color: #0f020f;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.escena1Style .juego {
+  height: 700px;
+  width: 700px;
+  overflow: hidden;
+  background-image: url(fondo/bosque.jpeg);
+  background-size: contain;
+}
+.escena1Style .juego img {
+  width: 80px;
+  position: relative;
+}
+.escena1Style .juego .diablo {
+  top: 357px;
+}
+.escena1Style .juego .princesa {
+  top: 449px;
+  left: 332px;
+}
+.escena1Style .papel {
+  position: absolute;
+  top: -5px;
+}
+.escena1Style .papel img {
+  width: 750px;
+}
+.escena1Style .papel p {
+  position: absolute;
+  bottom: 63px;
+  left: 65px;
+  font-family: "UnifrakturCook", cursive;
+  font-size: 40px;
+  color: rgb(28, 11, 2);
+}
+.escena1Style .papel .flecha {
+  position: absolute;
+  right: 70px;
+  bottom: 60px;
+  width: 20px;
+}
+.escena1Style .papel .flecha:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+.escena1Style .papel .hide {
+  opacity: 0;
+}
+.escena1Style .papel .show {
+  opacity: 100;
+}/*# sourceMappingURL=style.css.map */

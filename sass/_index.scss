@@ -1,0 +1,127 @@
+.indexStyle {
+    margin: 0;
+    padding: 40px 0;
+    width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: #0f020f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .personajes {
+        display: flex;
+        flex-direction: row;
+
+        img {
+            margin: 0 -100px;
+            height: 350px;
+        }
+
+        .personajePrincipal {
+            transition: all ease-out 1s;
+            z-index: 4;
+            height: 400px;
+        }
+
+        .diablo, .princesa {
+            transition: all 1s ease; 
+        }
+    }
+
+    .contenedorCartel {
+        position: relative;
+        display: inline-block;
+        transition: all 1s ease; 
+    
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -90px);
+            color: rgb(28, 11, 2);
+            font-size: 50px;
+            font-family: "UnifrakturCook", cursive;
+            z-index: 1;
+            cursor: pointer; 
+        }
+    
+        .cartel1 {
+            width: 300px;
+            height: auto;
+            transition: all 0.5s ease; 
+        }
+    
+        &:hover{
+            .cartel1 {
+                filter: brightness(70%);
+            }
+        }
+    }  
+
+    .form {
+        position: absolute;
+        bottom: 50px;
+        opacity: 0;
+        transform: translateY(0);
+        transition: opacity 1s ease, transform 1s ease;
+
+        .cartel2 {
+            width: 350px;
+            height: 120px;
+        }
+
+        .flecha {
+            height: 120px;
+            transition: all ease 0.5s;
+            filter: brightness(100%);
+
+            &:hover {
+                cursor: pointer;
+                filter: brightness(70%);
+            }
+        }
+
+        input {
+            position: absolute;
+            height: 50px;
+            width: 250px;
+            transform: translate(50px, 30px);
+
+            font-size: 40px;
+            font-family: "UnifrakturCook", cursive;
+            color: rgb(28, 11, 2);
+
+            background-color: transparent;
+            border: none;
+            outline: none;
+
+            &::placeholder {
+                color:  rgb(132, 103, 51);
+            }
+        }
+    }
+}
+
+.clicked {
+    .personajePrincipal {
+        transform: scale(1.2);
+    }
+
+    .diablo, .princesa {
+        transform: scale(0.8); 
+        opacity: 0; 
+    }
+
+    .contenedorCartel {
+        opacity: 0; 
+        transform: translateY(80px);
+    }
+    
+   .form {
+        opacity: 1;
+        transform: translateY(-100px);
+   }
+}

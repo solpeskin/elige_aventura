@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elige tu propia aventura</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="indexStyle">
+    <div class="personajes">
+        <img class="diablo" src="img/personaje2.png" alt="diablo">
+        <img class="personajePrincipal" src="img/personaje1.png" alt="personaje principal">
+        <img class="princesa" src="img/personaje3.png" alt="princesa">
+    </div>
+    
+    <div class="contenedorCartel" onclick="clickeado()">
+        <p>Empezar</p>
+        <img class="cartel1" src="img/cartel/cartel1.png" alt="cartel madera">
+    </div>
+    <div class="form">
+        <input onchange="guardarNombre()" class="nombre" type="text" value="" placeholder="Tu nombre" maxlength="10">
+        <img class="cartel2" src="img/cartel/cartel1.png" alt="cartel madera">
+        <a href="src/escena1.html"><img class="flecha" src="img/cartel/flecha.png" alt="flecha"></a>
+    </div>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
